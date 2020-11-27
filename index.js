@@ -11,5 +11,9 @@ module.exports = {
       fn(arr[index], index);
     }
   }
+
+  // map(arr , fn){
+
+  // }
 };
 
