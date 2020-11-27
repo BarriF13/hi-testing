@@ -10,10 +10,14 @@ module.exports = {
     for (let index in arr) { //0 , 1 , 2 
       fn(arr[index], index);
     }
+  },
+
+  map(arr, fn) {
+    const res = [];
+    for (let i = 0 ; i < arr.length; i++) {
+     res.push(fn(arr[i], i))
+    }
+    return res
   }
-
-  // map(arr , fn){
-
-  // }
 };
 
