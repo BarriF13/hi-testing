@@ -1,18 +1,24 @@
 //using node to refactor all the if statement
 const assert = require('assert');
-const { forEach, map } = require('./index');
-//Helper Function 
-const test = (desc, fn) => {
-  console.log('----', desc);
-  try {
-    fn();
-  } catch (err) {
-    console.log(err);
-  }
 
-};
+const { forEach, map } = require('./index');
+
+//-----------------we dont need the code below if we use mocha 
+
+// //Helper Function 
+// const test = (desc, fn) => {
+//   console.log('----', desc);
+//   try {
+//     fn();
+//   } catch (err) {
+//     console.log(err);
+//   }
+
+// };
+//----------------------------------------------
+
 //--- second version of test
-test('The forEach function', () => {
+it('The forEach function', () => {
   let sum = 0;
   forEach([1, 2, 3], (value) => {
     sum += value;
@@ -31,7 +37,7 @@ test('The forEach function', () => {
 //     throw new Error('Expected summing array to equal 6');
 //   }
 //--- second version of test
-test('The map function', () => {
+it('The map function', () => {
   const res = map([1, 2, 3], value => {
     return value * 2;
   })
